@@ -120,9 +120,3 @@ function calcularAreaCirculo(){
     alert('El area del circulo es ' + areaC + ' cm.')
 };
 
-// function calcularAreaCirculo(){
-//     const input = document.getElementById("InputCirculo");
-//     const value = input.value;
-//     const area = areaCirculo(value);
-//     console.log("El area del circulo es: " + area);
-// }
