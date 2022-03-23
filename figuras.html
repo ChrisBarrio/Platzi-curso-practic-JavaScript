@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!----- Boxicons ----->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Figuras Geometricas | Curso practico JavaScript</title>
+    <!-- Style -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@600&display=swap');
+
+        body{
+            max-width: 480px;
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+        }
+        h1{text-align: center;
+        text-decoration: 2px underline;
+        }
+        h2{
+            text-align: center;
+        }
+        
+        p{
+            text-align: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form div{
+            padding: 1rem;
+        }
+        form button{
+            padding: .5rem;
+            background-color: transparent;
+            border-radius: .5rem;
+            color: white;
+            font-weight: 800;
+            transition: all 1s;
+            cursor: pointer;
+        }
+        form button:hover{
+            color: black;
+            background-color: #fff;
+        }
+        label{
+            padding: 1rem;
+        }
+        input{
+            border: 1px solid #ccc;
+            border-radius: .5rem;
+            width: 12rem;
+            height: 1.5rem;
+            padding: .5rem;
+            margin: .3rem;
+        }
+        .cuadrado{
+            background-color: #97DBAE;
+            border-radius: 1rem;
+        }
+        .triangulo{
+            background-color: #C3E5AE;
+            border-radius: 1rem;
+        }
+        .circulo{
+            background-color: #F1E1A6;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Figuras geometricas</h1>
+        <p>Elige la opcion que quieras calcular</p> 
+    </header>    
+    
+    <!-- Cuadrado -->
+    <section class="cuadrado">
+        <h2>Cuadrado <i class='bx bx-shape-square bx-md' ></i></h2>
+        <form>
+            <label for="InputCuadrado">
+                Escribe cuanto mide cada lado de tu Cuadrado 
+            </label>
+            <input id="InputCuadrado" type="number" placeholder="Ingrese lado">
+            <div>
+                <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el perimetro</button>
+                <button type="button" onclick="calcularAreaCuadrado()">Calcular el area</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Triangulo -->
+    <section class="triangulo">
+        <h2>Triangulo <i class='bx bx-shape-triangle bx-md'></i></h2>
+        <form>
+            <label for="InputTriangulo">
+                Escribe cuanto mide cada lado de tu Triangulo 
+            </label>
+            <input id="InputTrianguloA" name = 'ladoA' type="number" placeholder="Ingrese lado a">
+            <input id="InputTrianguloB" name = 'ladoB' type="number" placeholder="Ingrese lado b">
+            <input id="InputTrianguloBase" name = 'base' type="number" placeholder="Ingrese base">
+            <input id="InputTrianguloAltura" name = 'altura' type="number" placeholder="Ingrese altura">
+            <div>
+                <button type="button" onclick="calcularPerimetroTriangulo()">Calcular el perimetro</button>
+                <button type="button" onclick="calcularAreaTriangulo()">Calcular el area</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Circulo -->
+
+    <section class="circulo">
+        <h2>Circulo <i class='bx bx-shape-circle bx-md' ></i></h2>
+        <form>
+            <label for="InputCirculo">
+                Escribe el radio de tu circulo 
+            </label>
+            <input id="InputCirculo" type="number" placeholder="Ingrese radio">
+            <div>
+                <button type="button" onclick="calcularDiametro()">Calcular el diametro</button>
+                <button type="button" onclick="calcularPerimetroCirculo()">Calcular el perimetro</button>
+                <button type="button" onclick="calcularAreaCirculo()">Calcular el area</button>
+            </div>
+        </form>
+    </section>
+
+
+
+
+<script src="./figuras.js"></script>    
+</body>
+</html>
