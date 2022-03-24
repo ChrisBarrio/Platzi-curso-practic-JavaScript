@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descuentos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+            background: url(./img/bg-descuentos.jpg);
+            font-family: 'Indie Flower', cursive;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+        }
+        h1{
+            background-color: rgba(41, 182, 135, 0.521);
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+        }
+        label,input{
+            padding: .5rem;
+            margin: .5rem;
+        }
+        button{
+            padding: .3rem;
+            width: 10rem;
+            cursor: pointer;
+
+        }
+        p{
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Porcentajes y descuentos</h1>
+    </header>
+    
+    <section>
+        <h2>Calcula el precio a pagar en tus productos con descuento.</h2>
+
+        <form>
+            <label for="InputPrice">Escribe el precio($) de tu producto</label>
+            <input type="text" id="InputPrice" type="number" placeholder="$$$">
+
+            <label for="InputDiscount">Escribe el descuento(%) de tu producto</label>
+            <input type="text" id="InputDiscount" type="number" placeholder="%">
+
+            <button type="button" onclick="btn_priceDiscount()">
+                👉🏽Calcular el precio con descuento
+            </button>
+
+            <p id="ResultP"></p>
+        </form>
+    </section>
+
+
+
+
+
+
+
+
+
+<!-- script -->
+<script src="./descuentos.js"></script>    
+</body>
+</html>
